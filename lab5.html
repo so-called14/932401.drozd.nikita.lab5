@@ -1,0 +1,155 @@
+﻿﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Портфолио фотографа и визуального сторителлера Никиты: фотопроекты, настройки съёмки и обратная связь.">
+    <title>Никита — фотограф и визуальный сторителлер</title>
+    <link rel="stylesheet" type="text/css" href="styles-lab5.css">
+
+    <style>
+        aside a {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+
+        aside a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <figure class="avatar">
+            <img src="img/trodatome(klaud).jpg"
+                 alt="Аватар автора с Клодом из Звездных войн"
+                 class="img">
+        </figure>
+        <h1>Никита</h1>
+        <p>Фотограф и визуальный сторителлер</p>
+    </header>
+
+    <nav class="main-nav" aria-label="Навигационное меню">
+        <ul class="nav-list">
+            <li><a href="#about">Навыки</a></li>
+            <li><a href="#projects">Фотопроекты</a></li>
+            <li><a href="#settings">Настройки съёмки</a></li>
+            <li><a href="#contact">Обратная связь</a></li>
+        </ul>
+    </nav>
+
+    <div class="base">
+        <main class="inmain">
+            <section id="about">
+                <h2>Навыки</h2>
+                <ul>
+                    <li>Композиция и кадрирование</li>
+                    <li>Работа со светом</li>
+                    <li>Постобработка и цветокоррекция</li>
+                    <li>Визуальный сторителлинг</li>
+                </ul>
+            </section>
+
+            <section id="projects">
+                <h2>Фотопроекты</h2>
+                <div class="gallery-controls">
+                    <button type="button" id="changeTheme" class="btn">Тёмная тема</button>
+                    <button type="button" id="hideGallery" class="btn">Скрыть галерею</button>
+                </div>
+
+                <form id="addPhoto" class="form-block" novalidate>
+                    <div>
+                        <label for="photoUrl">URL изображения</label>
+                        <input id="photoUrl" type="text" name="photoUrl" placeholder="https://example.com/photo.jpg">
+                    </div>
+
+                    <div>
+                        <label for="photoCaption">Подпись</label>
+                        <input id="photoCaption" type="text" name="photoCaption" placeholder="Закат над Томском">
+                    </div>
+
+                    <button type="submit" class="btn">Добавить фото</button>
+                    <p id="formError" class="form-error" role="alert" aria-live="polite"></p>
+                </form>
+
+                <div class="gallery-grid" id="galleryGrid">
+                    <figure class="gallery-item">
+                        <img src="img/iceland.jpg"
+                             alt="Фотография с северным сиянием в Исландии">
+                        <figcaption>Северное сияние - Исландия</figcaption>
+                        <button type="button" class="remove-photo" aria-label="Удалить фото">✕</button>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img src="img/sibir.jpg"
+                             alt="Фотография Васюганских болот Западной Сибири">
+                        <figcaption>Великолепная природа - Томск</figcaption>
+                        <button type="button" class="remove-photo" aria-label="Удалить фото">✕</button>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img src="img/rickowen.jpg"
+                             alt="Фотография Кировского райсовета в Санкт-Петербурге">
+                        <figcaption>Архитектурный минимализм - Санкт-Петербург</figcaption>
+                        <button type="button" class="remove-photo" aria-label="Удалить фото">✕</button>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="settings">
+                <h2>Настройки съёмки</h2>
+                <div class="settings-grid">
+                    <article class="setting-card">
+                        <span>📷</span>
+                        <h3>ISO</h3>
+                        <p>400</p>
+                    </article>
+
+                    <article class="setting-card">
+                        <span>⏱️</span>
+                        <h3>Выдержка</h3>
+                        <p>1/250 с</p>
+                    </article>
+
+                    <article class="setting-card">
+                        <span>🕳️</span>
+                        <h3>Диафрагма</h3>
+                        <p>f/2.8</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="contact" class="form-block">
+                <h2>Обратная связь</h2>
+                <form action="#" method="post">
+                    <div>
+                        <label for="username">Имя</label>
+                        <input id="username" type="text" name="username" placeholder="Никита">
+                    </div>
+                    <div>
+                        <label for="usermail">Email</label>
+                        <input id="usermail" type="email" name="useremail" placeholder="nik.drozd06@yandex.ru">
+                    </div>
+                    <div>
+                        <label for="usermessage">Сообщение</label>
+                        <textarea id="usermessage" name="usermessage" placeholder="Здравствуйте, не могли бы вы рассказать о..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <h2>Любимое направление</h2>
+            <p>Пейзаж - бескрайние поля, горные хребты</p>
+            <p>Лучшие фотоаппараты здесь: <a href="https://www.dns-shop.ru/">Купить</a></p>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Copyright © 2026. Никита Дрозд</p>
+    </footer>
+    <script src="script-lab5.js"></script>
+</body>
+</html>
