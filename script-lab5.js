@@ -31,7 +31,11 @@
         [changeThemeButton, 'changeTheme'],
         [changeGalleryButton, 'hideGallery'],
         [addPhotoForm, 'addPhoto'],
-        [galleryGrid, '#galleryGrid']
+        [galleryGrid, '#galleryGrid'],
+        // добавил исправления
+        [photoUrlInput, 'photoUrl'],
+        [photoCaptionInput, 'photoCaption'],
+        [formError, 'formError']
     ];
 
     for (const [element, name] of requiredElements) {
